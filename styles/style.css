@@ -1,0 +1,27 @@
+* {margin: 0; padding: 0;}
+
+/*-- GENERAL NAVBAR CSS--*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw;
+}
+
+ul {display: flex; list-style: none;}
+
+nav span,li{
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+/*-- MOBILE NAVBAR --*/
+@media only screen and (max-width: 600px) {
+    #desktop-nav {display: none;}
+  }
+/*-- DESKTOP NAVBAR --*/
+@media only screen and (min-width: 600px) {
+    #desktop-nav {display: flex;}
+    #mobile-nav {display: none;}
+}
