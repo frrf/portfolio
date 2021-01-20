@@ -1,27 +1,69 @@
-* {margin: 0; padding: 0;}
+/*-- GOOGLE FONT: Nunito --*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+/*-- COLOR VARIABLES --*/
+:root {
+    --body-color:#98d1ff;
+    --nav-bar-color:rgb(3, 5, 94);
+    --nav-font:white;
+}
+
+* {
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: var(--body-color);
+}
 
 /*-- GENERAL NAVBAR CSS--*/
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 1vw;
+    background-color: var(--nav-bar-color);
+    color: var(--nav-font);
 }
 
-ul {display: flex; list-style: none;}
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-nav span,li{
-    margin-left: 2vw;
-    margin-right: 2vw;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
+ul {
+    display: flex; 
+    list-style: none;
 }
 
 /*-- MOBILE NAVBAR --*/
 @media only screen and (max-width: 600px) {
-    #desktop-nav {display: none;}
+    #desktop-nav {display: ;}
+    
+    #mobile-nav {
+        overflow: hidden;
+        bottom: 0;
+        width: 100%;
+        position: fixed;
+        font-size: 5vw;
+    }
+
+    nav span,li{
+        margin-left: 2vw;
+        margin-right: 2vw;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+    }
   }
 /*-- DESKTOP NAVBAR --*/
 @media only screen and (min-width: 600px) {
     #desktop-nav {display: flex;}
     #mobile-nav {display: none;}
+
+    #desktop-nav span,li{
+        margin-left: 3vw;
+        margin-right: 3vw;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+    }
 }
