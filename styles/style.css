@@ -5,6 +5,7 @@
 :root {
     --body-color:#98d1ff;
     --nav-bar-color:rgb(3, 5, 94);
+    --nav-active-color:#50cdff;
     --nav-font:white;
 }
 
@@ -35,26 +36,74 @@ ul {
     display: flex; 
     list-style: none;
 }
+/*
+.hover-grow:hover {
+    transform: scale(1.35);
+    transition: .3s;
+}
+*/
+.hover-grow:active {
+    transform: scale(1);
+    transition: .2s;
+}
 
-/*-- MOBILE NAVBAR --*/
+/*-- MOBILE --*/
 @media only screen and (max-width: 600px) {
-    #desktop-nav {display: ;}
-    
+    /*-- MOBILE NAVBAR --*/
+    #desktop-nav {display: none;}
     #mobile-nav {
         overflow: hidden;
         bottom: 0;
         width: 100%;
         position: fixed;
         font-size: 5vw;
+        display: block;
     }
+    #mobile-nav ul {justify-content: space-evenly;}
+    #mobile-nav ul li a {
+        display: block;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 2vw;
+        padding-bottom: 2.3vw;
+    }
+    #mobile-nav ul li a svg{
+        vertical-align: middle;
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .mobile-nav-icon {
+        fill: var(--nav-font);
+    }
+    .hover-grow:hover {
+        transition: .3s;
+    }
+    .hover-grow:active {
+        transform: scale(.9);
+        transition: .1s;
+        fill: var(--nav-active-color);
+    }
+}
 
-    nav span,li{
-        margin-left: 2vw;
-        margin-right: 2vw;
-        margin-top: 1vw;
-        margin-bottom: 1vw;
-    }
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*-- DESKTOP NAVBAR --*/
 @media only screen and (min-width: 600px) {
     #desktop-nav {display: flex;}
