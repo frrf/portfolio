@@ -1,22 +1,35 @@
 /*-- GOOGLE FONT: Nunito --*/
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
-
 /*-- COLOR VARIABLES --*/
 :root {
-    --body-color:#98d1ff;
-    --nav-bar-color:rgb(3, 5, 94);
-    --nav-active-color:#50cdff;
-    --nav-font:white;
-}
+    /*-- COLORS --*/
+    --navy-blue:            #03045eff;
+    --dark-cornflower-blue: #023e8aff;
+    --star-command-blue:    #0077b6ff;
+    --blue-green:           #0096c7ff;
+    --cerulean-crayola:     #00b4d8ff;
+    --sky-blue-crayola:     #48cae4ff;
+    --sky-blue-crayola-2:   #90e0efff;
+    --blizzard-blue:        #ade8f4ff;
+    --powder-blue:          #caf0f8ff;
 
+    --body-color:rgb(152, 209, 255);
+    
+    /*-- NAV --*/
+    --nav-bar-color:rgb(3, 5, 94);
+    --nav-active-color:rgb(80, 205, 255);
+    --nav-font:rgb(255, 255, 255);
+}
 * {
     margin: 0; 
     padding: 0; 
     font-family: 'Nunito', sans-serif;
+    /*font-family: "Neutra",sans-serif;*/
+    box-sizing: border-box;
 }
-
 body {
     background-color: var(--body-color);
+    -webkit-font-smoothing: antialiased;
 }
 
 /*-- GENERAL NAVBAR CSS--*/
@@ -25,49 +38,61 @@ nav {
     justify-content: space-between;
     background-color: var(--nav-bar-color);
     color: var(--nav-font);
-}
+    z-index: 300;
+    width: 100%;
+    position: fixed;
 
-a {
-    text-decoration: none;
-    color: inherit;
 }
-
-ul {
+.flex-list {
     display: flex; 
     list-style: none;
 }
-/*
-.hover-grow:hover {
-    transform: scale(1.35);
-    transition: .3s;
+
+/*-- MAIN--*/
+main {
+    overflow: hidden;
 }
-*/
-.hover-grow:active {
-    transform: scale(1);
-    transition: .2s;
+main #home {
+    position: relative;
+    height: 100vh;
+}
+h1 {
+    font-size: 4em;
+}
+p {
+    display: block;
+    margin: 1.25em 0;
+    font-size: 1.5em;
 }
 
-/*-- MOBILE --*/
+
+/*-- MOBILE CSS --*/
 @media only screen and (max-width: 600px) {
+    main {
+        padding-bottom: 4.625rem;
+    }
+    
     /*-- MOBILE NAVBAR --*/
     #desktop-nav {display: none;}
     #mobile-nav {
         overflow: hidden;
         bottom: 0;
         width: 100%;
-        position: fixed;
         font-size: 5vw;
         display: block;
+        box-shadow: 0em -.1em .5em var(--nav-bar-color);
     }
-    #mobile-nav ul {justify-content: space-evenly;}
-    #mobile-nav ul li a {
+    #mobile-nav ul {
+        justify-content: space-evenly;
+    }
+    #mobile-nav a {
         display: block;
         padding-left: 2vw;
         padding-right: 2vw;
         padding-top: 2vw;
         padding-bottom: 2.3vw;
     }
-    #mobile-nav ul li a svg{
+    #mobile-nav svg{
         vertical-align: middle;
         height: 2.5rem;
         width: 2.5rem;
@@ -75,6 +100,7 @@ ul {
     .mobile-nav-icon {
         fill: var(--nav-font);
     }
+    /*--ON SVG TAGS IN NAV --*/
     .hover-grow:hover {
         transition: .3s;
     }
@@ -84,35 +110,28 @@ ul {
         fill: var(--nav-active-color);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*-- DESKTOP NAVBAR --*/
+/*-- DESKTOP CSS --*/
 @media only screen and (min-width: 600px) {
-    #desktop-nav {display: flex;}
+    main {
+        padding-top: 4.625rem;
+    }
+    /*-- DESKTOP NAVBAR --*/
     #mobile-nav {display: none;}
+    #desktop-nav {
+        display: flex;
+        font-size: 1.8rem;
+        box-shadow: -.1em 0em .5em var(--nav-bar-color);
 
-    #desktop-nav span,li{
-        margin-left: 3vw;
-        margin-right: 3vw;
-        margin-top: 1vw;
-        margin-bottom: 1vw;
+    }
+    #desktop-nav span, li a{
+        padding-left: 3vw;
+        padding-right: 3vw;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+    }
+    #desktop-nav a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
     }
 }
