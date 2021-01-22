@@ -4,7 +4,8 @@
 :root {
     /*-- COLORS --*/
     --navy-blue:            #03045eff;
-    --dark-cornflower-blue: #023e8aff;
+    --dark-cornflower-blue: rgba(2, 61, 138);
+    --dark-cornflower-blue-trans: rgba(2, 61, 138, 0.793);
     --star-command-blue:    #0077b6ff;
     --blue-green:           #0096c7ff;
     --cerulean-crayola:     #00b4d8ff;
@@ -16,7 +17,7 @@
     --body-color:rgb(152, 209, 255);
     
     /*-- NAV --*/
-    --nav-bar-color:rgb(3, 5, 94);
+    --nav-bar-color:rgb(0, 1, 76);
     --nav-active-color:rgb(80, 205, 255);
     --nav-font:rgb(255, 255, 255);
 }
@@ -27,11 +28,19 @@
     /*font-family: "Neutra",sans-serif;*/
     box-sizing: border-box;
 }
-body {
-    background-color: var(--body-color);
-    -webkit-font-smoothing: antialiased;
+
+html {
+    height: 100%;
 }
 
+body {
+    height: 100%;
+    margin: 0;
+    background:linear-gradient(var(--nav-bar-color), var(--star-command-blue));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+}
 /*-- GENERAL NAVBAR CSS--*/
 nav {
     display: flex;
@@ -49,24 +58,116 @@ nav {
 }
 
 /*-- MAIN--*/
+
 main {
-    overflow: hidden;
+    width: 100%;
+    height: 93%;
 }
-main #home {
-    position: relative;
-    height: 100vh;
+
+section {
+    padding: 2em;
 }
+
+.content {
+    width: 100%;
+}
+
 h1 {
     font-size: 4em;
+    color: var(--powder-blue);
+    margin-bottom: .5em;
+    text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 17vw;
+        color: var(--powder-blue);
+        margin-bottom: .5em;
+        text-align: center;
+    }
+}
+
 p {
-    display: block;
-    margin: 1.25em 0;
-    font-size: 1.5em;
+    font-size: 1.4em;
+    color: var(--nav-font);
 }
 
+.hero {
+    text-align: center;
+}
 
-/*-- MOBILE CSS --*/
+.img-circle {
+    position: relative;
+    color: white;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    max-width: 654px;
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid black;
+    background: radial-gradient(transparent, rgb(4, 0, 30)), url(/images/code2.gif);
+
+}
+img {
+    width: 100%;
+    max-width: inherit;
+    height: auto;
+    
+}
+
+.in-image {
+    position: absolute;
+    top: 88.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--dark-cornflower-blue-trans);
+    border-bottom-left-radius: 160px;  /* 100px of height + 10px of border */
+    border-bottom-right-radius: 160px;
+    width: inherit;
+    max-width: inherit;
+    height: 41%;
+    
+    
+}
+
+/*-- IN-IMAGE P TAG ADJUSTMENTS --*/
+@media only screen and (max-width: 701px) {
+    span p {
+        font-size: 4vw;
+        width: 94%;
+        text-align: center;
+        padding-left: 6%;
+        line-height: 153%;
+    }
+}
+@media only screen and (min-width: 701px) {
+    span p {
+        font-size: 34.7px;
+        width: 94%;
+        text-align: center;
+        padding-left: 6%;
+        line-height: 164%;
+    }
+}
+
+/* the hover over portfolio = change to anon / cyber sec interest 
+.image{
+  width:100px;
+  height:100px;
+}
+
+.image:hover{
+    content:url("http://via.placeholder.com/350x150");
+}
+<img class="image"/>
+
+
+*/
+
+
+/*-- MOBILE NAV CSS --*/
 @media only screen and (max-width: 600px) {
     main {
         padding-bottom: 4.625rem;
@@ -110,7 +211,7 @@ p {
         fill: var(--nav-active-color);
     }
 }
-/*-- DESKTOP CSS --*/
+/*-- DESKTOP NAV CSS --*/
 @media only screen and (min-width: 600px) {
     main {
         padding-top: 4.625rem;
