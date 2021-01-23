@@ -110,12 +110,25 @@ p {
     background: radial-gradient(transparent, rgb(4, 0, 30)), url('../images/code2.gif');
 
 }
-img {
+
+.hero-img {
     width: 100%;
     max-width: inherit;
     height: auto;
-    
+
 }
+
+#headshot {
+    position: absolute;
+    top: -.1%;
+    left: 0%;
+    transition: .8s;
+}
+
+#headshot:hover {
+    opacity: 0;
+}
+
 
 .in-image {
     position: absolute;
