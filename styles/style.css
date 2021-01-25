@@ -78,9 +78,17 @@ main {
     justify-content: space-between;
 }
 
+/*-- MAIN FLEX TO COLUMN --*/
 @media only screen and (max-width: 1024px) {
     #home-holder {flex-direction: column;}
 }
+/*-- MAIN RESIZE HERO FOR BIGGER MONITORS --*/
+@media only screen and (min-width: 1025px) {
+    .hero {
+        width: clamp(40em, 25vw ,40em);
+    }
+}
+
 .content {
     width: clamp(1px,100%,1029px);
 }
@@ -177,9 +185,8 @@ h1 {
 
 .in-image {
     position: absolute;
-    top: 88.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 66.5%;
+    left: 0%;
     background-color: var(--dark-cornflower-blue-trans);
     border-bottom-left-radius: 160px;  /* 100px of height + 10px of border */
     border-bottom-right-radius: 160px;
@@ -193,7 +200,7 @@ h1 {
 /*-- IN-IMAGE P TAG ADJUSTMENTS --*/
 @media only screen and (max-width: 701px) {
     span p {
-        font-size: 4vw;
+        font-size: clamp(15px,1.5vw,33.7px);
         width: 94%;
         text-align: center;
         padding-left: 6%;
@@ -202,7 +209,7 @@ h1 {
 }
 @media only screen and (min-width: 701px) {
     span p {
-        font-size: 34.7px;
+        font-size: clamp(21px,1.5vw,33.7px);
         width: 94%;
         text-align: center;
         padding-left: 6%;
