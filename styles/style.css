@@ -88,14 +88,6 @@ section {
 .content {
     width: clamp(1px,100%,1029px);
 }
-
-h1 {
-    font-size: clamp(2.5em, 6vw, 7em);    
-    color: var(--sky-blue-crayola-2);
-    margin-right: 2vw;
-    margin-bottom: .5em;
-    text-align: center;
-}
 /*-- P TAG AND A TAG IN MAIN --*/
 .main-info-text {
     font-size: clamp(1.1em,2vw,2.5em);
@@ -233,63 +225,16 @@ h1 {
     }
 }
 
-/*-- A tag modifier --*/
-
-
-/*-- A TAG CUSTOMIZATION --*/
-.a-tag-btn {
-    color: var(--sky-blue-crayola-2);
-    font-weight: 700;
-    fill: var(--sky-blue-crayola-2); 
-    display: flex;
-    align-items: center;
-    transform-origin: center;
-
-}
-.a-tag-btn:hover > svg {
-    transition: .5s;
-    transform: scale(1.1);
-}
-.a-tag-btn:active > svg {
-    transition: .2s;
-    transform: scale(.9);
-    fill: var(--power-blue);
-}
-.a-tag-btn svg {
-    width: clamp(29px,2.5vw,3vw);
-    height: auto;
-    margin-right: 10px;
-}
-.a-tag-btn p {
-    margin-left: .5em;
-}
-
-.no-decoration {
-    text-decoration: none;
-}
-/*-- SVG CLICK ANIMATION --*/
-.hover-grow:hover {
-    transition: .3s;
-}
-.hover-grow:active {
-    transform: scale(.9);
-    transition: .1s;
-    fill: var(--nav-active-color);
-}
-
 /*-- WORK SECTION --*/
-
 #work {
     height: 100%;
 }
-
 .work-holder {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem,18rem));
     grid-gap: 2rem;
     justify-content: center;
 }
-
 .card {
     overflow: hidden;
     box-shadow: 0px 2px 20px var(--navy-blue);
@@ -336,11 +281,148 @@ h1 {
     fill: var(--nav-active-color);
 }
 
+/*-- ABOUT SECTION --*/
+.about-holder {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.about-holder p {
+    color: var(--nav-font)
+}
+
+
+/*-- CONTACT SECTION --*/
+.form-wrapper {
+    box-shadow: 0px 2px 20px var(--navy-blue);
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    color: var(--nav-font)
+}
+
+input {
+    width: 100%;
+    padding: .75em;
+    margin: 0 0 1.5em;
+    font-family: "Neutra",sans-serif;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 0 0 transparent;
+    transition: all .2s ease-in-out;
+}
+
+textarea {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 500px;
+    min-height: 150px;
+    padding: .75em;
+    font-family: "Neutra",sans-serif;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 2px;
+    background-color: #f0f0f0;
+    transition: box-shadow .2s ease-in-out;
+    box-shadow: 0 0 0 0 transparent;
+}
+
+button {
+    margin-top: 10px;
+    background: transparent;
+    display: flex;
+    border: none;
+    align-items: center;
+    cursor: pointer;
+    fill: var(--nav-font);
+    color: var(--nav-font);
+    width: fit-content;
+    transition: .1s;
+}
+
+button:hover {
+    fill: var(--nav-active-color);
+    color: var(--nav-active-color);
+    transform: scale(1.01);
+    transition: .1s;
+}
+
+button:active {
+    fill: var(--nav-bar-color);
+    color: var(--nav-bar-color);
+    transform: scale(1);
+}
+
+.submit-icon {
+    padding-right: 5px;
+}
+
+.submit-icon svg{
+    width: clamp(29px,2.5vw,3vw);
+    height: auto;
+}
+
+button p {
+    font-size: clamp(1.5em,2vw,2.5em);
+}
 
 
 
 
+/*-- H1 TAG CUSTOMIZATION --*/
+h1 {
+    font-size: clamp(2.5em, 6vw, 7em);    
+    color: var(--sky-blue-crayola-2);
+    margin-bottom: .5em;
+    text-align: center;
+}
+/*-- A TAG CUSTOMIZATION --*/
+.a-tag-btn {
+    color: var(--sky-blue-crayola-2);
+    font-weight: 700;
+    fill: var(--sky-blue-crayola-2); 
+    display: flex;
+    align-items: center;
+    transform-origin: center;
 
+}
+.a-tag-btn:hover > svg {
+    transition: .5s;
+    transform: scale(1.1);
+}
+.a-tag-btn:active > svg {
+    transition: .2s;
+    transform: scale(.9);
+    fill: var(--power-blue);
+}
+.a-tag-btn svg {
+    width: clamp(29px,2.5vw,3vw);
+    height: auto;
+    margin-right: 10px;
+}
+.a-tag-btn p {
+    margin-left: .5em;
+}
 
+.no-decoration {
+    text-decoration: none;
+}
 
-
+/*-- SVG CLICK ANIMATION --*/
+.hover-grow:hover {
+    transition: .3s;
+}
+.hover-grow:active {
+    transform: scale(.9);
+    transition: .1s;
+    fill: var(--nav-active-color);
+}
