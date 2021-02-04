@@ -43,8 +43,6 @@ body {
 
 /*-- GENERAL NAVBAR CSS--*/
 nav {
-    display: flex;
-    justify-content: space-between;
     background-color: var(--nav-bar-color);
     color: var(--nav-font);
     z-index: 300;
@@ -208,10 +206,13 @@ section {
     /*-- DESKTOP NAVBAR --*/
     #mobile-nav {display: none;}
     #desktop-nav {
+        width: clamp(262px,100%,2000px);
+        margin: auto;
         display: flex;
         font-size: 1.8rem;
         box-shadow: -.1em 0em .5em var(--nav-bar-color);
-
+        display: flex;
+        justify-content: space-between;
     }
     #desktop-nav span, li a{
         padding-left: 3vw;
