@@ -288,11 +288,13 @@ section {
     width: 90%;
 }
 .about-holder p {
-    color: var(--nav-font)
+    color: var(--nav-font);
+    font-size: clamp(1.1em,2vw,2.5em);
 }
 
 
 /*-- CONTACT SECTION --*/
+
 .form-wrapper {
     box-shadow: 0px 2px 20px var(--navy-blue);
     border-radius: 15px;
@@ -318,6 +320,7 @@ input {
     background-color: #f0f0f0;
     box-shadow: 0 0 0 0 transparent;
     transition: all .2s ease-in-out;
+    border-radius: 15px;
 }
 
 textarea {
@@ -329,11 +332,26 @@ textarea {
     padding: .75em;
     font-family: "Neutra",sans-serif;
     font-size: 1.5em;
-    border: none;
     border-radius: 2px;
     background-color: #f0f0f0;
-    transition: box-shadow .2s ease-in-out;
+    transition: all .2s ease-in-out;
     box-shadow: 0 0 0 0 transparent;
+    border-radius: 15px;
+}
+
+.form-style {
+    border: solid var(--navy-blue);
+    box-shadow: 0px 2px 20px var(--navy-blue);
+}
+
+.form-style:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 2px 20px var(--sky-blue-crayola);
+}
+
+.form-style:focus {
+    transform: scale(1.01);
+    box-shadow: 0px 2px 20px var(--sky-blue-crayola);
 }
 
 button {
@@ -405,7 +423,7 @@ h1 {
     fill: var(--power-blue);
 }
 .a-tag-btn svg {
-    width: clamp(29px,2.5vw,3vw);
+    width: clamp(40px,2.5vw,50px);
     height: auto;
     margin-right: 10px;
 }
@@ -425,4 +443,9 @@ h1 {
     transform: scale(.9);
     transition: .1s;
     fill: var(--nav-active-color);
+}
+
+.responsive-containment {
+    width: clamp(262px,100%,1240px);
+    margin: auto;
 }
