@@ -81,8 +81,12 @@ main {
     width: 100%;
     height: auto;
 }
+
+#home {
+    height: 100vh;
+}
+
 section {
-    height: auto;
     padding: clamp(13px,3vw,115px);
 }
 
@@ -320,6 +324,7 @@ section {
 }
 
 /*-- ABOUT SECTION --*/
+
 .about-holder {
     display: flex;
     flex-direction: column;
@@ -332,6 +337,10 @@ section {
 
 
 /*-- CONTACT SECTION --*/
+
+#contact {
+    height: 90vh;
+}
 
 .form-wrapper {
     box-shadow: 0px 2px 20px var(--navy-blue);
@@ -463,6 +472,7 @@ h1 {
     color: var(--sky-blue-crayola-2);
     margin-bottom: .5em;
     text-align: center;
+    margin-top: 35px;
 }
 /*-- A TAG CUSTOMIZATION --*/
 .a-tag-btn {
