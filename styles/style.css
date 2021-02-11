@@ -1,4 +1,4 @@
-/*-- GOOGLE FONT: Nunito --*/
+0/*-- GOOGLE FONT: Nunito --*/
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 /*-- COLOR VARIABLES --*/
 :root {
@@ -339,7 +339,7 @@ section {
 /*-- CONTACT SECTION --*/
 
 #contact {
-    height: 90vh;
+    height: 100%;
 }
 
 .form-wrapper {
