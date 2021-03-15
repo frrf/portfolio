@@ -83,7 +83,7 @@ main {
 }
 
 #home {
-    height: 100vh;
+    height: fit-content;
 }
 
 section {
